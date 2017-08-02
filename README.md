@@ -1,3 +1,4 @@
 Kodları denemek için browserda sayfayı açmanız yeterli.
 
-İyi çalışmalar..
+
+İyi çalışmalar...

@@ -1,0 +1,37 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Hello World</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
+  
+    <script type="text/babel">
+       
+       var MerhabaDunya=React.createClass({
+           render:function(){
+           return <div>Merhaba Dünya</div>
+           }
+       })
+
+       var Selamlama=React.createClass({
+       render:function(){
+       return(
+        <div>
+          <MerhabaDunya/>
+          <br/>
+          <MerhabaDunya/>
+        </div>
+       )
+       }
+       })
+      ReactDOM.render(<Selamlama/> , document.getElementById('root'))
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

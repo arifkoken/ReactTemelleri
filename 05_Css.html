@@ -1,0 +1,51 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Hello World</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
+      <style type="text/css">
+      
+      .red{
+        background-color: red;
+        color:white;
+      }
+      .mavi{
+        background-color: blue;
+        color:white;
+      }
+    </style>
+
+<script type="text/babel">
+    var mystle={background:'red'};
+    var CssComponet=React.createClass({
+          getInitialState:function(){
+           return{myclass:"red"}
+           }, 
+
+        styleDegistir(){
+           this.setState({myclass:"mavi"});
+        },
+        render(){
+         var mystle2={background:'red'};
+          return (
+              <div>
+                <h3 className={this.state.myclass}>Satır 1</h3>
+                <h3 style={{background:'red',color:'white'}}>Satır 2</h3>
+                <h3 style={mystle}>Satır 3</h3>
+                <h3 style={mystle2}>Satır 4</h3>
+                <button onClick={this.styleDegistir}>Style Degistir</button>
+              </div>
+             )
+        }
+    })
+    ReactDOM.render(<CssComponet/> ,document.getElementById('root'));
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
